@@ -9,7 +9,7 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website</title>
+        <title>Portfolio</title>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -145,21 +145,38 @@
                 <h2 class="section-title">Work Experience</h2>
 
                 <div class="work__container bd-grid">
+            
+        <article class="flip-card" tabindex="0" aria-label="Software Engineer Intern">
+        <div class="flip-card__inner">
+        <div class="flip-card__face flip-card__front card-grad-1">
+          <h3 class="flip-card__role">Software Engineer Intern</h3>
+          <span class="flip-card__hint">Hover to read more</span>
+        </div>
+        <div class="flip-card__face flip-card__back">
+            
+         
+          <ul class="work__ul">
+            <li>Designed a concurrency-safe pipeline that resolves overlapping purchase signals arriving from independent sources into a single authoritative record. The hard part isn't ingestion , it's deciding that two events describing the same real-world purchase are the same purchase.</li>
+            <li>Engineering a ledger with idempotent posting and deterministic hold, reversal, and refund handling, so a retried or duplicated request can never double-credit an account.</li>
+            <li>Led migration and recovery coordination for a 5-engineer team across a large MongoDB Atlas environment, including the rollback paths.</li>
+          </ul>
+        </div>
+        </div>
+        </article>
 
             <article class="flip-card" tabindex="0" aria-label="Data Engineer Intern">
                     <div class="flip-card__inner">
-                    <div class="flip-card__face flip-card__front card-meta">
-                    <!-- <h3 class="flip-card__title">Data Engineer Intern</h3> -->
-                    <!-- <p class="flip-card__title"><b>Meta</b></p> -->
-                    
+                    <div class="flip-card__face flip-card__front card-grad-2">
+                    <h3 class="flip-card__role">Data Engineer Intern</h3>
+                    <span class="flip-card__hint">Hover to read more</span>
                 </div>
                 <div class="flip-card__face flip-card__back">
-                     <h3 class="flip-card__title">Data Engineer Intern</h3>
+                     
                 
                 <ul class="work__ul">
-                <li> Developed 4 production-grade distributed data pipelines on Meta infra, processing billions of records for real-time analytics </li>
-                <li>Engineered Python validation frameworks ensuring schema integrity, null-safety, idempotency & fault-tolerant recovery </li>
-                <li>Optimized DAG workflows via query planning & parallelism, driving adoption across 3+ cross-functional teams</li>
+                <li> Built and shipped four distributed ingestion pipelines processing billions of records daily. At that volume, correctness assumptions that hold in a test fixture stop holding. </li>
+                <li>Engineered Python validation frameworks enforcing schema integrity, null-safety, and idempotency guarantees, with fault-tolerant recovery so a partial failure resumes cleanly instead of requiring a full backfill. </li>
+                <li>Optimized DAG-based workflows through query planning and parallel execution, converting sequential stages into concurrent ones. The approach was picked up by 3+ cross-functional teams </li>
             </ul>
             </div>
             </div>
@@ -167,16 +184,16 @@
 
             <article class="flip-card" tabindex="0" aria-label="Software Developer">
             <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front card-ict">
-            <!-- <h3 class="flip-card__title">Software Developer</h3> -->
-            
+            <div class="flip-card__face flip-card__front card-grad-3">
+            <h3 class="flip-card__role">Software Developer</h3>
+            <span class="flip-card__hint">Hover to read more</span>
             </div>
             <div class="flip-card__face flip-card__back">
-            <h3 class="flip-card__title">Software Developer</h3>
+            
             <ul class="work__ul">
-            <li> Built scalable internal platforms using C# ASP.NET Core Razor Pages, integrating Minimal APIs for efficient service-to-UI data flow</li>
-            <li> Designed normalized SQL Server schemas with stored procedures; leveraged EF Core & LINQ for dynamic rendering and automated reporting</li>
-            <li> Deployed real-time KPI dashboards using EF Core aggregation queries with low-latency pipelines in production </li>
+            <li> Built scalable internal tooling in C# ASP.NET Core Razor Pages with Minimal API endpoints for service-to-UI data flow, using dependency injection to keep components independently testable and replaceable.</li>
+            <li> Designed normalized SQL Server schemas with stored procedures, and built EF Core data with LINQ query optimization for dynamic rendering and automated reporting. Cut Excel report generation time by 40%</li>
+            <li> Modeled part of the institute's financial data, then built on it directly, deploying live KPI dashboards backed by EF Core aggregation queries with end-to-end validation and monitoring in production. </li>
 
 
           </ul>
@@ -184,19 +201,20 @@
         </div>
         </article>
 
+
         <article class="flip-card" tabindex="0" aria-label="AI Engineer Intern">
         <div class="flip-card__inner">
-        <div class="flip-card__face flip-card__front card-tifr">
-          
-         
+        <div class="flip-card__face flip-card__front card-grad-4">
+          <h3 class="flip-card__role">AI Engineer Intern</h3>
+          <span class="flip-card__hint">Hover to read more</span>
         </div>
         <div class="flip-card__face flip-card__back">
-            <h3 class="flip-card__title">AI Engineer Intern</h3>
+            
          
           <ul class="work__ul">
-            <li>Built CV pipelines with SIFT-based feature extraction, improving classification precision by 25% over CNN baselines</li>
-            <li>Fine-tuned & deployed ResNet-50 and VGG variants, reducing inference latency by 30% in high-throughput systems</li>
-            <li>Designed modular preprocessing pipelines for robust, standardized multi-source data ingestion</li>
+            <li>Built computer vision pipelines using SIFT-based feature extraction, implementing keypoint detection and descriptor matching to produce scale and rotation-invariant representations for downstream classification</li>
+            <li>Fine-tuned and deployed ResNet-50 and VGG variants, taking them from pretrained weights through task-specific training to production inference, and reduced inference latency by 30% in high-throughput conditions</li>
+            <li>Designed modular preprocessing pipelines that normalize and standardize inputs arriving from multiple sources, so downstream models receive consistent data regardless of origin format or quality.</li>
           </ul>
         </div>
         </div>

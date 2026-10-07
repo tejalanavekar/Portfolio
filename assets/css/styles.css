@@ -567,36 +567,56 @@ img {
 
 .flip-card__front {
   color: #fff;
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.50rem;
-
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
 }
 
-.card-meta{
-  background-image: url("../img/meta.png");
-
+.flip-card__role {
+  font-size: 1.35rem;
+  font-weight: var(--font-semi);
+  line-height: 1.35;
+  color: #fff;
 }
 
-.card-ict{
-  background-image: url("../img/Ict.jpg");
+.flip-card__hint {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.card-tifr{
-  background-image: url("../img/tifr.png");
+.card-grad-1,
+.card-grad-4 {
+  background-image: linear-gradient(135deg, hsl(224, 89%, 60%), hsl(260, 80%, 55%));
+}
+
+.card-grad-2,
+.card-grad-3 {
+  background-image: linear-gradient(135deg, hsl(195, 82%, 52%), hsl(224, 89%, 60%));
 }
 
 .flip-card__back {
   background: hsl(var(--hue-color), 89%, 60%);
   color: #fff;
   transform: rotateY(180deg);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow-y: auto;
+  justify-content: flex-start;
+  padding: 1.75rem 1.25rem 1.25rem;
+}
+
+.flip-card__back li {
+  margin-bottom: 0.35rem;
 }
 
 .flip-card__title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.4;
   color:black;
   margin-bottom: 0.5rem;
@@ -762,6 +782,9 @@ img {
     bottom: 10%;
     bottom: -3rem;
   }
+  .about {
+    margin-top: 5rem;
+  }
   .about__container {
     padding-top: 2rem;
   }
@@ -774,9 +797,18 @@ img {
     align-items: center;
     text-align: initial;
   }
+  .work {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
   .work__container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
+    row-gap: 1.5rem;
+    padding-top: 1rem;
+  }
+  .flip-card {
+    height: 265px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -790,6 +822,14 @@ img {
   .home__img {
     width: 450px;
     bottom: -3rem;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+  }
+  .flip-card {
+    height: 275px;
   }
 }
 
