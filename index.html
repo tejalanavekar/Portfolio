@@ -100,7 +100,7 @@
                         </ul>
 
                         <div class="about__buttons">
-                        <a href="./assets/resume/Tejal_Resume_SWE.pdf" target="_blank" rel="noopener noreferrer" class ="button">
+                        <a href="./assets/resume/Tejal_SWE_Resume.pdf" target="_blank" rel="noopener noreferrer" class ="button">
                             
                             View Resume
                          </a>
@@ -230,32 +230,30 @@
                 <div class="projects__container bd-grid">
                 <!--Project card-->
 
-                <article class="project-card" data-project>
+            <article class="project-card" data-project>
                 <button class="project-card__summary" type="button" aria-expanded="false">
-                <span> AgentThreads -  Threads for Humans and AI Agents </span>
+                <span>  Taal - Workshop Booking Platform </span>
                 <i class='bx bx-plus'></i>
                 </button>
                 <div class="project-card__content" hidden>
                 <p class="project-card__desc">
-                Built AgentThreads, a full-stack social network for humans and AI agents using Next.js 16 App Router, TypeScript, Supabase (Postgres + Auth), and Tailwind CSS v4. Architected server-side rendering with RSC, cookie-based SSR auth, real-time follow/notification system , and optimistic UI updates. Deployed on Vercel with CI/CD via GitHub integration.
+                 <strong>Two-sided marketplace architecture:</strong> Building a platform serving two user types with fundamentally different needs; dancers discovering workshops, instructors managing and streaming them from a single unified codebase, with role-based navigation and dashboards branching from shared infrastructure rather than duplicated flows.
+                </p>
+                <p class="project-card__desc">
+                 <strong>AI ranking over a structured skill profile:</strong> Engineering a ranking engine that scores workshops against a dancer's 5-axis skill fingerprint, turning a subjective question — is this class at my level? — into something the system can reason about and rank.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Real-time streaming and chat:</strong> Implemented live workshop streaming with WebSocket-backed chat, holding connection state for concurrent participants.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Geolocation discovery:</strong> Built a split-panel map discovery view pairing spatial browsing with filtered results, so location and relevance narrow a search together rather than competing.
                 </p>
                 <ul class="project-card__tags">
-                <li class="tag">Next.js</li><li class="tag">TypeScript</li><li class="tag">Supabase</li><li class="tag">Postgres</li><li class="tag">Tailwind CSS</li><li class="tag">Vercel</li>   
+                <li class="tag">React Native</li><li class="tag">Expo</li><li class="tag">Supabase</li><li class="tag">FastAPI</li><li class="tag">PostgreSQL</li>
                 </ul>
-                <div class="paper__button">
-                <a href="https://github.com/tejalanavekar/agentthreads" target="_blank" rel="noopener" class="button github-button">
-                <i class='bx bxl-github'></i> GitHub
-            </a>
-            
-                 <a href="https://agentthreads-five.vercel.app/" target="_blank" rel="noopener" class="button">
-                <i class='bx bx-link-external'></i> Demo
-            </a>
-            </div>
-                
-                
-                
             </div>
             </article>
+                
 
              <article class="project-card" data-project>
                 <button class="project-card__summary" type="button" aria-expanded="false">
@@ -264,7 +262,16 @@
                 </button>
                 <div class="project-card__content" hidden>
                 <p class="project-card__desc">
-                Developed an LLM-powered debugging platform that transforms software errors into interactive learning workflows, combining schema-validated AI reasoning, personalized concept explanations, adaptive assessments, and persistent sandbox environments for hands-on experimentation.
+                <strong>LLM-driven debugging workflows:</strong> Platform converting software errors into guided exercises, with Groq-served inference generating challenge content, explanations, and assessments against a fixed response contract.
+                </p>
+                <p class="project-card__desc">
+                <strong>Zod-constrained model output:</strong> Engineered a validation pipeline enforcing 12+ structured fields on every LLM response, rejecting and regenerating malformed output so the UI renders against a guaranteed shape instead of defensive parsing. The schema is the integration contract between a nondeterministic generator and a deterministic frontend.
+                </p>
+                <p class="project-card__desc">
+                <strong>Multi-provider OAuth:</strong> Diagnosed and resolved an authentication defect spanning two OAuth providers, where differing callback behavior produced inconsistent session state.
+                </p>
+                <p class="project-card__desc">
+                <strong>Feedback-driven flow redesign:</strong> Restructured the debugging sequence after observing users produce correct fixes without understanding them, moving concept explanation ahead of the fix step.
                 </p>
                 <ul class="project-card__tags">
                 <li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Node.js</li><li class="tag">Express.js</li><li class="tag">Supabase</li><li class="tag"> Tailwind CSS </li><li class="tag">Groq LLM</li>
@@ -281,7 +288,16 @@
                 </button>
                 <div class="project-card__content" hidden>
                 <p class="project-card__desc">
-                 Architected a modular full-stack MERN application with service-layer separation (decoupling REST API services, business logic, and UI components) enabling scalable request handling; implemented secure authentication using JWT with bcrypt hashing and optimized session management via Redis caching and integrated LangChain-powered LLM pipelines to deliver AI-driven financial insights, improving response accuracy by 25%
+                 <strong>Personal finance platform: </strong>A full-stack MERN application for budget and expense tracking, where users photograph receipts to log spending and query an AI assistant grounded in their real transaction history; built so the financial data stays structured enough to both chart and reason over.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Layered architecture and OCR ingestion: </strong> Separated route handlers, business logic, and data access into distinct layers, with Express middleware handling auth, Zod validation, and rate limiting before any controller runs. Receipt images flow through OCR into a normalization step extracting merchant, amount, date, and category into structured records scored against budgets.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Auth and grounded AI insights: </strong> JWT authentication with bcrypt hashing, route-level protect middleware, Google OAuth verification, and a password reset flow using hashed single-use tokens. A LangChain pipeline queries the user's real transaction history, grounding generated insights in actual spending rather than prompt-embedded summaries.
+                </p>
+                <p class="project-card__desc">
+                <strong>39-test suite, two layers: </strong>Backend integration tests run real HTTP requests through the full Express stack — routing, rate limiter, Zod validation, controller — against a throwaway in-memory MongoDB via mongodb-memory-server, with only external services mocked.
                 </p>
                 <ul class="project-card__tags">
                 <li class="tag">MongoDB</li><li class="tag">Express.js</li><li class="tag">React</li><li class="tag">Node.js</li><li class="tag">LangChain</li><li class="tag">REST API</li>
@@ -296,7 +312,16 @@
                 </button>
                 <div class="project-card__content" hidden>
                 <p class="project-card__desc">
-                Designed KA-CVAE (Conditional VAE) in PyTorch by integrating BioBERT embeddings to model unseen CRISPR perturbations with a 128-dimensional latent space capturing both single and combinatorial perturbations, and evaluated the performance on Norman scRNA-seq OOD benchmarks, achieving an R² of 0.996 and outperforming baseline generative models
+                <strong>Predicting unseen genetic perturbations: </strong>A generative model that predicts cellular response to CRISPR perturbations it has never seen during training, by grounding the latent space in biological language rather than expression data alone.
+                </p>
+                <p class="project-card__desc">
+                <strong>KA-CVAE with language-model conditioning: </strong> Designed a conditional VAE in PyTorch that integrates BioBERT embeddings as conditioning signal, so semantic knowledge about a gene carries into the generative model which is what makes generalization to unseen perturbations possible at all.
+                </p>
+                <p class="project-card__desc">
+                <strong>Unified single and combinatorial modeling: </strong>Built a 128-dimensional latent space representing both single-gene and combinatorial perturbations in one architecture, rather than treating combinations as a separate problem.
+                </p>
+                <p class="project-card__desc">
+                <strong>OOD benchmark results: </strong>Evaluated on Norman scRNA-seq out-of-distribution benchmarks, reaching an R² of 0.996 and outperforming baseline generative models.
                 </p>
                 <ul class="project-card__tags">
                 <li class="tag">Pytorch</li><li class="tag">Conditional Variational AutoEncoder</li><li class="tag">scRNA-seq</li><li class="tag">Generative Modeling</li>
@@ -312,7 +337,16 @@
                 </button>
                 <div class="project-card__content" hidden>
                 <p class="project-card__desc">
-                 Implemented a seq2seq architecture with a fine-tuned BERT encoder and attention-based LSTM decoder over relational schemas, enhancing schema-aware cross-attention across database metadata to improve multi-table query generation and syntactic validity, achieving 91.8% execution accuracy and 82.2% exact match on the Spider dataset
+                 <strong>Natural language to SQL: </strong> A sequence-to-sequence model translating plain-English questions into executable SQL over relational databases, including queries that span multiple tables.
+                </p>
+                <p class="project-card__desc">
+                 <strong>BERT encoder, attention-based LSTM decoder: </strong> Implemented a fine-tuned BERT encoder paired with an attention-based LSTM decoder, generating SQL token by token against the encoded question and schema.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Schema-aware cross-attention: </strong>Self-attention mechanisms are extended across database metadata so the decoder conditions on table and column structure while generating — the mechanism that makes multi-table joins and syntactically valid output possible, rather than plausible-looking SQL that fails to execute.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Spider benchmark results: </strong> Achieved 91.8% execution accuracy and 82.2% exact match on Spider, a cross-domain benchmark where test databases are unseen during training.
                 </p>
                 <ul class="project-card__tags">
                 <li class="tag">Pytorch</li><li class="tag">Natural Language Processing</li><li class="tag">BERT</li><li class="tag">Long Short-Term Memory</li>
@@ -332,7 +366,16 @@
                 </button>
                 <div class="project-card__content" hidden>
                 <p class="project-card__desc">
-                 Architected a microservices-based system decoupling geolocation, weather, and user services into independently deployable modules, deployed containerized APIs on GCP Cloud with autoscaling achieving 93% location accuracy and 35% higher user retention, while integrating geolocation and weather REST APIs with caching for low-latency real-time and daily forecast delivery
+                 <strong>Location-aware weather platform: </strong> A weather application delivering real-time conditions and daily forecasts based on a user's location, with mobile and web clients over a shared service backend.
+                </p>
+                <p class="project-card__desc">
+                <strong>Microservices Architecture: </strong> Decoupled geolocation, weather, and user services into independently deployable modules, so each scales and ships on its own schedule rather than as one unit.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Containerized Deployment: </strong> Deployed containerized APIs on GCP with autoscaling, handling variable load without manual provisioning.
+                </p>
+                <p class="project-card__desc">
+                 <strong>Cached API Integration: </strong> Integrated external geolocation and weather REST APIs behind a caching layer, cutting repeat upstream calls and keeping forecast delivery fast under load.
                 </p>
                 <ul class="project-card__tags">
                 <li class="tag">MongoDB</li><li class="tag">Express.js</li><li class="tag">React</li><li class="tag">Node.js</li><li class="tag">Flask</li><li class="tag">Swift</li><li class="tag">Google Cloud Platform</li>
